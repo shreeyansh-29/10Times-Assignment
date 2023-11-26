@@ -1,0 +1,97 @@
+/* RightPanel */
+
+.right-panel{
+    width: 50%; 
+    padding: 30px 40px;
+}
+
+
+.right-panel .color-container{
+    height: 50vh;
+    border-radius: 20px;
+    background-color: #eadcb1;
+    position: relative;
+}
+
+.right-panel .color-container h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3.8rem;
+    color: #fff;
+}
+
+.right-panel .color-container div{
+    position: absolute;
+    background-color: #000;
+    height: 50px;
+    width: 50px;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+}
+
+.right-panel .color-container div .icon{
+    color: #fff;
+    font-size: 26px;
+}
+
+.theme{
+    margin-top: 24px;
+}
+
+.theme > h2{
+    color: #babcbc; 
+    font-weight: 700; 
+}
+
+.right-menu{
+    border-radius: 20px;
+    margin: 14px 0;
+    background-color: #f6f6f6;
+}
+
+.menu-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-container > div:first-child{
+    display: flex;
+}
+
+.menu-container > div:last-child{
+    display: flex;
+    align-items: center;
+}
+
+.menu-container .counter{
+    color: grey; 
+    font-size: 20px; 
+    margin-left: 20px; 
+}
+
+.menu-container .color-circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    background-color: grey;
+}
+
+.right-menu ToolBox{
+    border-radius: 20px;
+}
+
+.right-menu p{
+    margin-left: 20px;
+    color: grey;
+    font-size: 20px;
+    font-weight: 600;
+}

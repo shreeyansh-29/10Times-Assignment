@@ -1,0 +1,41 @@
+.eventDetails{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    /* height: 16rem; */
+    width: 70%;
+    justify-content: space-between;
+}
+
+.infoSection p{
+    font-size: 22px;
+    color: grey;
+}
+
+.infoSection h1{
+    margin: 24px 0;
+    max-width: 600px;
+}
+
+.infoSection > div{
+    display: flex;
+    align-items: center;
+}
+
+.infoSection > div > p{
+    font-size: 22px;
+    margin: 2px 0px 10px 10px;
+}
+
+.eventImage{
+    width: 28%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.eventImage > img {
+    width: 100%; 
+    height: 60%; 
+    object-fit:cover;
+}

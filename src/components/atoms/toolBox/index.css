@@ -1,0 +1,8 @@
+.tool-box{
+    background-color:#f6f6f6;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content:'space-between';
+}
+

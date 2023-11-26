@@ -1,0 +1,26 @@
+.container{
+    display: flex; 
+    background-color: #fff;
+    margin: 0px 60px 60px 60px;
+    /* height: 80vh; */
+    border-radius: 20px;
+}
+
+/* .inputField{
+    margin: 20px 0;
+}
+
+.inputField input{
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.inputField input::placeholder{
+    color: #908e8e;
+} */
+
+/* .theme{
+    margin-top: 24px;
+} */
