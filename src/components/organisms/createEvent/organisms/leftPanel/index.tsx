@@ -134,6 +134,23 @@ const formValidation = Yup.object().shape({
     .nullable(),
   startDate: Yup.string().trim().required("Start date is required").nullable(),
   startTime: Yup.string().trim().required("Start time is required").nullable(),
-  endDate: Yup.string().trim().required("End date is required").nullable(),
+  endDate: Yup.string()
+    .trim()
+    .required("End date is required")
+    .test(
+      "is-greater-than-or-equal",
+      "End date must be greater than or equal to start date",
+      function (endDate) {
+        const { startDate } = this.parent;
+        if (startDate && endDate) {
+          const dateFormat = "ddd, MMM D";
+          const formattedStartDate = dayjs(startDate, { format: dateFormat });
+          const formattedEndDate = dayjs(endDate, { format: dateFormat });
+          return formattedEndDate.isSame(formattedStartDate) || formattedEndDate.isAfter(formattedStartDate);
+        }
+        return true;
+      }
+    )
+    .nullable(),
   endTime: Yup.string().trim().required("End time is required").nullable(),
 });
