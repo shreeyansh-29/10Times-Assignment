@@ -56,7 +56,7 @@ const LeftPanel = (props: Iprops) => {
   const handleSubmit = (values: FormState) => {
     setIsLoading(true);
     let day: any = values.startDate?.split(", ")[0];
-
+    
     dispatch(
       createEvent({
         eventName: values.eventName,

@@ -40,7 +40,7 @@ export const dayNames: Record<any, string> = {
   Mon: "Monday",
   Tue: "Tuesday",
   Wed: "Wednesday",
-  Thur: "Thursday",
+  Thu: "Thursday",
   Fri: "Friday",
   Sat: "Saturday",
 };
