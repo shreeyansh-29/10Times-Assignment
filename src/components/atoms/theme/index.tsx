@@ -1,23 +1,23 @@
-import { itemType } from "../../molecules/themeContainer";
+import {itemType} from "../../organisms/createEvent/organisms/rightPanel/index";
 import "./index.css";
 
 interface Iprops {
   item: itemType;
   activeTheme: string;
-  onClick: (item: string) => void;
+  onClick: (item: itemType) => void;
 }
 
-const Theme = (props: Iprops) => {
-  const { item, activeTheme, onClick } = props;
+const ThemeCard = (props: Iprops) => {
+  const {item, activeTheme, onClick} = props;
 
   return (
-    <div className="themeCard" onClick={() => onClick(item.themeName)}>
+    <div className="themeCard" onClick={() => onClick(item)}>
       <div
         className="innerContainer"
         style={
           activeTheme === item.themeName
-            ? { borderColor: "#000", backgroundColor: item.backgroundColor }
-            : { backgroundColor: item.backgroundColor }
+            ? {borderColor: "#000", backgroundColor: item.backgroundColor}
+            : {backgroundColor: item.backgroundColor}
         }
       >
         <div className="content">
@@ -27,11 +27,11 @@ const Theme = (props: Iprops) => {
         </div>
       </div>
 
-      <p style={activeTheme === item.themeName ? { color: "#000" } : {}}>
+      <p style={activeTheme === item.themeName ? {color: "#000"} : {}}>
         {item.themeName}
       </p>
     </div>
   );
 };
 
-export default Theme;
+export default ThemeCard;

@@ -1,22 +1,15 @@
-import React, { useState } from "react";
-import "./index.css";
 import LeftPanel from "./organisms/leftPanel/index";
 import RightPanel from "./organisms/rightPanel/index";
+import {withRouter} from "react-router-dom";
+import "./index.css";
 
 const CreateEvent = () => {
-
-  const [activeTheme, setActiveTheme] = useState<string>('');
-
-  const handleClick = (item: string) => {
-    setActiveTheme(item);
-  }
-
   return (
     <div className="container">
-      <LeftPanel/>
-      <RightPanel activeTheme={activeTheme}  onClick={handleClick}/>
+      <LeftPanel />
+      <RightPanel />
     </div>
   );
 };
 
-export default CreateEvent;
+export default withRouter(CreateEvent);

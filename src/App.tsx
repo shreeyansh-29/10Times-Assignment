@@ -1,15 +1,11 @@
-import Navbar from './components/organisms/navbar';
-import CreateEvent from './components/organisms/createEvent';
-import EventListing from './components/organisms/eventListing';
-
-
+import store from "./redux/store";
+import Route from "./routes/route";
+import {Provider} from "react-redux";
 function App() {
   return (
-    <div>
-      <Navbar/>
-      <CreateEvent/>
-      {/* <EventListing/> */}
-    </div>
+    <Provider store={store}>
+      <Route />
+    </Provider>
   );
 }
 

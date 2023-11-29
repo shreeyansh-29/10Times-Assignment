@@ -1,0 +1,8 @@
+.picker-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ededed;
+  border-radius: 5px;
+  padding: 2px;
+}

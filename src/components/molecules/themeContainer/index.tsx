@@ -1,24 +1,23 @@
-import { useState } from "react";
-import { themeColor } from "../../../constants";
-import Theme from "../../atoms/theme";
+import {themeColor} from "../../../constants";
+import {itemType} from "../../organisms/createEvent/organisms/rightPanel/index";
+import ThemeCard from "../../atoms/theme";
 import "./index.css";
-
-export interface itemType {
-  backgroundColor: string;
-  themeName: string;
-}
 
 interface Iprops {
   activeTheme: string;
-  onClick: (item: string) => void;
+  onClick: (item: itemType) => void;
 }
 
-const ThemeContainer = ({ activeTheme, onClick }: Iprops) => {
-  
+const ThemeContainer = ({activeTheme, onClick}: Iprops) => {
   return (
     <div className="themeContainer">
       {themeColor.map((item: itemType) => (
-        <Theme item={item} activeTheme={activeTheme} key={item.themeName} onClick={onClick} />
+        <ThemeCard
+          item={item}
+          activeTheme={activeTheme}
+          key={item.themeName}
+          onClick={onClick}
+        />
       ))}
     </div>
   );

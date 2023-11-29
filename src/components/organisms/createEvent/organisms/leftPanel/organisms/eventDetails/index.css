@@ -1,0 +1,111 @@
+/* Event-Details */
+
+.event-details {
+  color: #babcbc;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calender-icon {
+  color: grey;
+  font-size: 44px;
+  margin-top: 16px;
+}
+
+.event-date {
+  width: 80%;
+  background-color: #f6f6f6;
+}
+
+.event-date p {
+  color: #000;
+  font-size: 20px;
+}
+
+.starting-details,
+.ending-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.starting-details > div,
+.ending-details > div {
+  display: flex;
+  background-color: #f6f6f6;
+  width: 70%;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.starting-details p,
+.ending-details p {
+  font-weight: 600;
+}
+
+.standard-timing,
+.session-details {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.standard-timing .icon,
+.session-details > .icon {
+  font-size: 30px;
+  color: hsl(240, 0%, 58%);
+}
+
+.standard-timing p,
+.session-details p {
+  font-weight: 400;
+  margin-left: 20px;
+  color: #939394;
+}
+
+/* Event Location */
+
+.event-location {
+  color: #babcbc;
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.location-selector {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  border: 2px solid #c6c6c6;
+  display: grid;
+  place-items: center;
+}
+
+.location-selector .location-icon {
+  color: grey;
+  font-size: 26px;
+}
+
+.location-container {
+  width: 80%;
+}
+
+.location-details {
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.location-details > input::placeholder {
+  color: #908e8e;
+}
+
+.form-error {
+  color: red;
+  margin-top: 5px;
+}

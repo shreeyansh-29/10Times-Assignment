@@ -1,0 +1,52 @@
+/* Event Options */
+
+.event-options {
+  margin-top: 24px;
+}
+
+.event-options > h2 {
+  color: #babcbc;
+  font-weight: 700;
+}
+
+.left-menu {
+  margin: 14px 0px;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.left-menu-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-menu-container > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.left-menu-container > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.left-menu-container > div > .left-icon {
+  color: grey;
+  font-size: 22px;
+}
+
+.left-menu p {
+  margin-left: 20px;
+  color: grey;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.left-menu-container > div:last-child > .counter {
+  color: grey;
+  font-size: 22px;
+  margin-left: 20px;
+}

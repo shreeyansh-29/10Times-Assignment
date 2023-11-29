@@ -1,0 +1,42 @@
+.right-menu {
+  border-radius: 20px;
+  margin: 14px 0;
+  background-color: #f6f6f6;
+}
+
+.right-menu-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.right-menu-container > div:first-child {
+  display: flex;
+}
+
+.right-menu-container> div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.right-menu-container > div:last-child > .counter {
+  color: grey;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.right-menu-container .color-circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: grey;
+}
+
+.right-menu p {
+  margin-left: 20px;
+  color: grey;
+  font-size: 20px;
+  font-weight: 600;
+}

@@ -1,17 +1,24 @@
-import React from 'react'
-import './index.css'
+import React from "react";
+import "./index.css";
 
 interface Iprops {
-  name: string,
-  onClick?: any,
-  styles: object
+  name?: string;
+  onClick?: any;
+  styles: object;
+  disabled?: boolean;
 }
 
-const CustomButton = (props : Iprops) => {
-  const {name, onClick, styles} = props;
+const CustomButton = (props: Iprops) => {
+  const {name, onClick, styles, disabled = false} = props;
   return (
-    <div className='button' onClick={onClick} style={styles}>{name}</div>
-  )
-}
+    <button
+      className="button"
+      onClick={disabled ? null : onClick}
+      style={styles}
+    >
+      {name}
+    </button>
+  );
+};
 
-export default CustomButton
+export default CustomButton;

@@ -1,5 +1,6 @@
 .navItem{
     margin-right: 20px;
+    display: flex;
 }
 
 .card{
@@ -11,7 +12,7 @@
 }
 
 .card > span{
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 3px;
 }
 

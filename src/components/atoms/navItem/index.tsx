@@ -1,5 +1,5 @@
-import "./index.css";
 import { itemType } from "../../organisms/navbar";
+import "./index.css";
 
 interface Iprops {
   item: itemType;

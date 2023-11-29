@@ -1,9 +1,10 @@
-.button{
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: default;
+.button {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: default;
+  border: none;
+  outline: none
 }
-
