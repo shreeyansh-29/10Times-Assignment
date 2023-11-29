@@ -1,6 +1,6 @@
 ## Getting started
 ```  
-git clone https://github.com/shreeyansh-29/10Times-Assignment)   
+git clone https://github.com/shreeyansh-29/10Times-Assignment 
 cd 10Times-Assignment
 npm install  
 ```  
