@@ -12,6 +12,7 @@ import {RouteUtil} from "../../../../../utils/routeUtils";
 import {withRouter} from "react-router-dom";
 import * as Yup from "yup";
 import dayjs from "dayjs";
+import moment from "moment";
 import "./index.css";
 
 const customButtonStyles = {
@@ -56,7 +57,7 @@ const LeftPanel = (props: Iprops) => {
   const handleSubmit = (values: FormState) => {
     setIsLoading(true);
     let day: any = values.startDate?.split(", ")[0];
-    
+
     dispatch(
       createEvent({
         eventName: values.eventName,
@@ -141,16 +142,42 @@ const formValidation = Yup.object().shape({
       "is-greater-than-or-equal",
       "End date must be greater than or equal to start date",
       function (endDate) {
-        const { startDate } = this.parent;
+        const {startDate} = this.parent;
         if (startDate && endDate) {
           const dateFormat = "ddd, MMM D";
-          const formattedStartDate = dayjs(startDate, { format: dateFormat });
-          const formattedEndDate = dayjs(endDate, { format: dateFormat });
-          return formattedEndDate.isSame(formattedStartDate) || formattedEndDate.isAfter(formattedStartDate);
+          const formattedStartDate = dayjs(startDate, {format: dateFormat});
+          const formattedEndDate = dayjs(endDate, {format: dateFormat});
+          return (
+            formattedEndDate.isSame(formattedStartDate) ||
+            formattedEndDate.isAfter(formattedStartDate)
+          );
         }
         return true;
       }
     )
     .nullable(),
-  endTime: Yup.string().trim().required("End time is required").nullable(),
+  endTime: Yup.string()
+    .trim()
+    .required("End time is required")
+    .test(
+      "is-greater-than-start-time",
+      "End time must be greater than start time",
+      function (endTime) {
+        const {startDate, endDate, startTime} = this.parent;
+        if (startDate && endDate && startTime && endTime) {
+          const dateFormat = "ddd, MMM D";
+          const timeFormat = "hh:mm A";
+          const formattedStartDate = dayjs(startDate, {format: dateFormat});
+          const formattedEndDate = dayjs(endDate, {format: dateFormat});
+          const formattedStartTime = moment(startTime, timeFormat);
+          const formattedEndTime = moment(endTime, timeFormat);
+
+          if (formattedStartDate.isSame(formattedEndDate)) {
+            return formattedEndTime.isAfter(formattedStartTime);
+          }
+        }
+        return true;
+      }
+    )
+    .nullable(),
 });
