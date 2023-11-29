@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {FaImage} from "react-icons/fa";
 import ThemeContainer from "../../../../molecules/themeContainer";
-import RightMenu from "./organisms/index";
+import RightMenu from "./organisms/rightMenu/index";
 import "./index.css";
 
 export interface itemType {
@@ -57,7 +57,10 @@ const RightPanel = () => {
       </div>
       <div className="theme">
         <h2>Theme</h2>
-        <ThemeContainer activeTheme={themeState.activeTheme} onClick={handleClick} />
+        <ThemeContainer
+          activeTheme={themeState.activeTheme}
+          onClick={handleClick}
+        />
       </div>
       <RightMenu themeState={themeState} />
     </div>

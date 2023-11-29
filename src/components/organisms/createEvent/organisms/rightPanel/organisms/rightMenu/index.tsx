@@ -1,7 +1,7 @@
 import {LuChevronsUpDown} from "react-icons/lu";
-import ToolBox from "../../../../../atoms/toolBox/toolBox";
-import CustomDivider from "../../../../../atoms/customDivider";
-import {themeStateType} from "..";
+import ToolBox from "../../../../../../atoms/toolBox/toolBox";
+import CustomDivider from "../../../../../../atoms/customDivider";
+import {themeStateType} from "../..";
 import "./index.css";
 
 interface Iprops {

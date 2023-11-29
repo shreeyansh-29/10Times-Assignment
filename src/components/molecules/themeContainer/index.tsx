@@ -1,6 +1,6 @@
 import {themeColor} from "../../../constants";
 import {itemType} from "../../organisms/createEvent/organisms/rightPanel/index";
-import ThemeCard from "../../atoms/theme";
+import ThemeCard from "../../atoms/themeCard/index";
 import "./index.css";
 
 interface Iprops {
