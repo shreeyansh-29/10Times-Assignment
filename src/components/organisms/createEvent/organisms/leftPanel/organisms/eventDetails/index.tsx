@@ -54,7 +54,7 @@ const EventDetails = (Iprops: Iprops) => {
             <div className="starting-details">
               <p>Start</p>
               <div>
-                <div>
+                <div style={{width:'100%'}}>
                   <PickerContainer
                     onDateChange={(date, dateString) =>
                       handleDateChange(date, dateString, "startDate")
@@ -86,7 +86,7 @@ const EventDetails = (Iprops: Iprops) => {
             <div className="ending-details">
               <p>End</p>
               <div>
-                <div>
+                <div style={{width:'100%'}}>
                   <PickerContainer
                     onDateChange={(date, dateString) =>
                       handleDateChange(date, dateString, "endDate")
